@@ -1,4 +1,4 @@
-package Ch20;
+package Board;
 
 public class BoardBean {
 	private int num;

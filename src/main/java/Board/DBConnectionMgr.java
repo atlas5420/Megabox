@@ -22,7 +22,7 @@
  * TO THE SOFTWARE.
  *
  */
-package Ch20;
+package Board;
 
 import java.sql.*;
 import java.util.Properties;

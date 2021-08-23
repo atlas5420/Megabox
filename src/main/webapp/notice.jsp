@@ -9,10 +9,15 @@
 <link rel="stylesheet" href="css/notice.css">
 <script src="js/board.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+	#wrap {background:white}
+	#aside {background:white}
+	#nav {background:white}
+</style>
 </head>
 <body>
-<jsp:useBean id="bMgr" class="Ch20.BoardMgr" scope="page" />
-<%@page import="java.util.*,Ch20.BoardBean" %>	<!-- ArrayList 사용위한 클래스 경로 설정-->
+<jsp:useBean id="bMgr" class="Board.BoardMgr" scope="page" />
+<%@page import="java.util.*,Board.BoardBean" %>	<!-- ArrayList 사용위한 클래스 경로 설정-->
 <%
 	int totalRecord=0;
 	int numPerPage=10;
@@ -89,6 +94,7 @@ function regioncate(e)
 	else if(e.value=="gj") var a=theater_gj;
 	else if(e.value=="kw") var a=theater_kw;
 	target.options.length=1;
+	document.getElementById("theater").removeAttribute("disabled");
 	for(x in a){
 		var opt=document.createElement("option");
 		opt.value=a[x];
@@ -105,6 +111,7 @@ $(function(){
 	    return false;
 	  }).filter(':eq(0)').click();
 	});
+	
 </script>
 
 <div id="wrap">
@@ -127,7 +134,7 @@ $(function(){
 	    	<div class="tabcontent">
 	      		<div id="tab01">
 	      			<div id="top">
-			            전체 !건
+			            전체 <font><%=bMgr.getTotalCount(keyField, keyWord) %></font>건
 			        </div>
 			        <div id="divi">
 			        	<form name=searchFrm method=get action=notice.jsp>
@@ -143,7 +150,7 @@ $(function(){
 							<option value="kw">강원</option>
 							<option value="jj">제주</option>
 				    	</select>
-			            <select id="theater" name="keyField2">
+			            <select id="theater" name="keyField2" disabled>
 			            	<option>극장선택</option>
 						</select>
 			            <input type="text" name="keyWord">

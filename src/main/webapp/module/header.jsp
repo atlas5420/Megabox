@@ -9,7 +9,7 @@
 
 <body>
 	<div class="header_top">
-		<a href="#"><img alt="" src="img/메가박스로고.JPG" class="ci"></a>
+		<a href="Main.jsp"><img alt="" src="img/메가박스로고.JPG" class="ci"></a>
 	</div>
 	<div id="left_link">
 		<ul>
