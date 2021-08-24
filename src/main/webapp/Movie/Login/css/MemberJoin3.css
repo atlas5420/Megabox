@@ -1,0 +1,236 @@
+.body-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+* {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: auto;
+    overflow-y: scroll;	/* 스크롤바 */
+    letter-spacing: 0; /* 글자간격 */
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+.member-wrap{
+	width: 720px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 80px 100px;
+    background-color: #fff;
+}
+.gohome {
+	overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0 0 70px 0;
+}
+
+.gohome a{
+	display: block;
+    width: 140px;
+    height: 47px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.col-wrap{
+	overflow:hidden;
+}
+.step-member{
+	overflow: hidden;
+    position: relative;
+    margin: 15px 0 40px 0;
+    padding: 0;
+}
+.step-member ol li:first-child {
+	margin-left:30px;
+}
+.step-member ol li {
+	float:left;
+	margin:0 0 0 27px;
+	padding:0;
+	text-align: center;
+	font-size: .9333em;
+}
+.member-wrap .step-member ol li .step {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0 0 15px 0;
+    font-size: .9333em;
+    letter-spacing: 0;
+}
+.member-wrap .step-member ol li .step.on {
+    border-bottom: 2px solid #503396;
+    color: #503396;
+}
+.step-member:after {
+	content:'';
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:1px;
+	background-color:#ebebeb;
+}
+.page-info-txt h3 {
+	display:block;
+	padding:0 0 10px 0;
+	color: #222;
+}
+colgroup {
+	    display: table-column-group;
+}
+col {
+    display: table-column;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+.board-form tbody td, .board-form tbody th {
+    position: relative;
+    height: 50px;
+    padding: 7px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5dd;
+}
+.board-form tbody th {
+	background:#f7f8f9;
+	width:150px;
+}
+
+.input-text {
+    display: inline-block;
+    width: 260px!important;
+    height: 32px;
+    padding: 0 10px;
+    line-height: 30px;
+    color: #444;
+    border: 1px solid #d8d9db;
+    vertical-align: middle;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+.ph1, .ph2, .ph3{
+    width: 100px!important;
+}
+
+.button {
+    display: inline-block;
+    height: 30px;
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 4px;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    text-decoration: none;
+    border: 1px solid #503396;
+    vertical-align: middle;
+    background-color: #503396;
+    cursor: pointer;
+}
+.button.idoverlap {
+	padding : 0 5px;
+	border : 1px solid #c1c1c1;
+	color : #777;
+	background-color : #e0e0e0;
+	font-size : .8111em;
+	margin-left: 2px!important;
+	width:69px;
+	line-height: 25px;
+}
+.button.setmegabox {
+	padding : 0 5px;
+	border : 1px solid #c1c1c1;
+	color : #777;
+	background-color : #ffffff;
+	font-size : .8111em;
+	margin-left: 2px!important;
+	width:48px;
+	line-height: 25px;
+}
+.marketing-agree{
+    border-radius: 2%;
+    border : 1px solid rgb(185, 185, 185);
+    margin-top: 45px;
+    
+}
+.marketing-agree .phr{
+    padding: 0 20px;
+    padding-bottom: 10px;
+    font-size: 16.5px;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+.cont{
+    padding: 0 20px;
+}
+.marketing-agree dl dt {
+    margin : 0 0 5px 0;
+    color : #666;
+    font-weight: 600;
+}
+.marketing-agree dl dd , .marketing-agree .samedd{
+    margin : 0 0 15px 0;
+    color : #666;
+    font-size: .8999em;
+}
+input[type="radio"]
+{
+    background-color: blue!important;
+}
+.markag {
+    background-color: rgb(240, 240, 240)!important;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    line-height: 40px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+.marketing-agree .samedt{
+    margin : 0 0 15px 0;
+    color : #666;
+    font-weight: 600;
+    
+}
+.footer{
+    padding-top: 10px;
+    text-align: center;
+}
+.join{
+    width: 200px!important;
+    height: 60px;
+    padding: 0!important;
+    font-size: 20px!important;
+    
+}
