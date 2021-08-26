@@ -81,7 +81,8 @@ public class BoardMgr {
 			while(rs.next()) {
 				BoardBean bean=new BoardBean();
 				bean.setNum(rs.getInt("num"));
-				bean.setTheatername(rs.getString("theatername"));
+				bean.setRegion(rs.getString("region"));
+				bean.setTheater(rs.getString("theater"));
 				bean.setDivi(rs.getString("divi"));
 				bean.setSubject(rs.getString("subject"));
 				bean.setRegdate(rs.getString("regdate"));
@@ -110,7 +111,7 @@ public class BoardMgr {
 			while(rs.next()) {
 				BoardBean bean=new BoardBean();
 				bean.setNum(rs.getInt("num"));
-				bean.setTheatername(rs.getString("theatername"));
+				bean.setTheater(rs.getString("theater"));
 				bean.setDivi(rs.getString("divi"));
 				bean.setSubject(rs.getString("subject"));
 				bean.setRegdate(rs.getString("regdate"));
@@ -139,7 +140,7 @@ public class BoardMgr {
 			while(rs.next()) {
 				BoardBean bean=new BoardBean();
 				bean.setNum(rs.getInt("num"));
-				bean.setTheatername(rs.getString("theatername"));
+				bean.setTheater(rs.getString("theater"));
 				bean.setDivi(rs.getString("divi"));
 				bean.setSubject(rs.getString("subject"));
 				bean.setRegdate(rs.getString("regdate"));
@@ -247,7 +248,7 @@ public class BoardMgr {
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
 				bean.setNum(rs.getInt("num"));
-				bean.setTheatername(rs.getString("theatername"));
+				bean.setTheater(rs.getString("theater"));
 				bean.setDivi(rs.getString("divi"));
 				bean.setContent(rs.getString("content"));
 				bean.setSubject(rs.getString("subject"));

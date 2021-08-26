@@ -187,7 +187,7 @@ $(function(){
 		%>
 		<tr height=50px>
 			<td align=center><%=bean.getNum() %></td>
-			<td align=center><%=bean.getTheatername()%></td>
+			<td align=center><%=bean.getTheater()%></td>
 			<td><%=bean.getDivi() %></td>
 			<td>
 			<a href="javascript:read('<%=bean.getNum()%>')"><%=bean.getSubject() %></a>
@@ -274,7 +274,7 @@ $(function(){
 		%>
 		<tr height=50px>
 			<td align=center><%=bean.getNum() %></td>
-			<td align=center><%=bean.getTheatername()%></td>
+			<td align=center><%=bean.getTheater()%></td>
 			<td><%=bean.getDivi() %></td>
 			<td>
 			<a href="javascript:read('<%=bean.getNum()%>')"><%=bean.getSubject() %></a>
@@ -343,7 +343,7 @@ $(function(){
 		%>
 		<tr height=50px>
 			<td align=center><%=bean.getNum() %></td>
-			<td align=center><%=bean.getTheatername()%></td>
+			<td align=center><%=bean.getTheater()%></td>
 			<td><%=bean.getDivi() %></td>
 			<td>
 			<a href="javascript:read('<%=bean.getNum()%>')"><%=bean.getSubject() %></a>
