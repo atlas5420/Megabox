@@ -156,12 +156,12 @@
 	.notice .notice_tbl .boardlist
 	{
 	    width:1100px;
-	    height:270px;
+	    height:220px;
 	    table-layout: fixed;
 	}
-	.notice_tbl table thead th {height:45px; width:150px; padding:3px 10px;}
-	.notice_tbl table thead th:nth-child(2) {width:680px;}
-	.notice_tbl table thead th:nth-child(4) {width:120px;}
+	.boardlist thead th {height:45px; width:150px; padding:3px 10px;}
+	.boardlist thead th:nth-child(2) {width:680px;}
+	.boardlist thead th:nth-child(4) {width:120px;}
 	.boardlist tbody tr {height: 45px;}
 	.boardlist>tbody>tr>td,.boardlist>tbody>tr>th  {height: 45px; padding: 10px; font-size: 14px;}
 	#footer

@@ -28,6 +28,15 @@ h2.title
     line-height:42px;
     text-align:center;
 }
+.tab_title li.on
+{
+    color: navy;
+    border-bottom: none;
+    background-color: white;
+}
+.storelist .list li:nth-child(4)~li {margin-top: 40px;}
+.newproduct {display: none;}
+ .newproduct.on {display: inherit;}
 .storemain
 {
     height: 254px;
@@ -102,10 +111,9 @@ h2.title
 .tit .title{float:left;}
 .tit .right {float:right;}
 
-.storelist
-{
-    height: 435px;
-}
+.storelist {height: 435px;}
+.storelist.mt30 { margin-top:30px;}
+.storelist .list {margin:0 0 0 -40px;}
 .storelist .list li
 {
     position: relative;
@@ -116,6 +124,7 @@ h2.title
     border-radius: 10px;
     border: 1px solid gray;
 }
+.storelist .list li:first_child {margin:0px;}
 .storelist .list li .label
 {
     width: 80px;
@@ -169,7 +178,7 @@ h2.title
 .storelist .list li .info .tit .bundle
 {
     height: 17px;
-    font-size: .8667em;
+    font-size: 12px;
     color:gray;
 }
 .storelist .list li .info .price
@@ -216,7 +225,7 @@ h2.title
 #footer
 	{
 	    position:absolute; 
-	    top:2228px; left:0px;
+	    top:2278px; left:0px;
 	    font-size:13px;
 	}
 	

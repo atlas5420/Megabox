@@ -11,10 +11,24 @@ public class tempPost {
 		String sql=null;
 		try {
 			conn=pool.getConnection();
-			for(int i=1;i<=1000;i++)
+			for(int i=1;i<=100;i++)
 			{
 			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
-			sql+=" values('서울','서울상암','공지','알림','안녕하세요',now());";
+			sql+=" values('서울','상암월드컵경기장','공지','알림','안녕하세요',now());";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			}
+			for(int i=1;i<=100;i++)
+			{
+			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
+			sql+=" values('서울','메가박스','공지','알림','안녕하세요',now());";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			}
+			for(int i=1;i<=100;i++)
+			{
+			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
+			sql+=" values('서울','홍대','공지','알림','안녕하세요',now());";
 			pstmt=conn.prepareStatement(sql);
 			pstmt.executeUpdate();
 			}

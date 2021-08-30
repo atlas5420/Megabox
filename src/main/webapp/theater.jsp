@@ -7,7 +7,7 @@
 <title>고객센터 | 라이브씨어터,메가박스</title>
 <%@ include file="jsp/link.jsp" %>
 <link rel="stylesheet" href="css/customerservice_content.css">
-<link rel="stylesheet" href="css/theater.css?12">
+<link rel="stylesheet" href="css/theater.css?12345">
 <script src="js/board.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
@@ -259,6 +259,7 @@
 							<th>등록일</th>
 						</tr>
 					</thead>
+					<tbody>
 					<%
 						listSize=blist.size();
 						if(blist.isEmpty()){
@@ -273,7 +274,7 @@
 								
 								BoardBean bean=blist.get(i);
 								%>
-								<tr height="45">
+								<tr>
 									<td align="center"><%=bean.getTheater() %></td>
 									<th align="left">
 										<a href="javascript:read('<%=bean.getNum()%>')"><%=bean.getSubject() %></a>
@@ -285,6 +286,7 @@
 							}
 						}
 					%>
+					</tbody>
 				</table>
 			</div>
         </div>
