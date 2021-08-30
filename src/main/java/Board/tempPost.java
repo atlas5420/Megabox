@@ -11,7 +11,7 @@ public class tempPost {
 		String sql=null;
 		try {
 			conn=pool.getConnection();
-			for(int i=1;i<=100;i++)
+			for(int i=1;i<=5;i++)
 			{
 			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
 			sql+=" values('서울','상암월드컵경기장','공지','알림','안녕하세요',now());";
@@ -25,10 +25,31 @@ public class tempPost {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.executeUpdate();
 			}
-			for(int i=1;i<=100;i++)
+			for(int i=1;i<=5;i++)
 			{
 			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
 			sql+=" values('서울','홍대','공지','알림','안녕하세요',now());";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			}
+			for(int i=1;i<=5;i++)
+			{
+			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
+			sql+=" values('서울','강남','공지','알림','안녕하세요',now());";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			}
+			for(int i=1;i<=10;i++)
+			{
+			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
+			sql+=" values('대구','대구(칠성로)','공지','알림','안녕하세요',now());";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			}
+			for(int i=1;i<=5;i++)
+			{
+			sql="insert into boardtbl(region,theater,divi,subject,content,regdate)";
+			sql+=" values('강원','남춘천','공지','알림','안녕하세요',now());";
 			pstmt=conn.prepareStatement(sql);
 			pstmt.executeUpdate();
 			}

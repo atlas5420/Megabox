@@ -72,6 +72,26 @@ public class BoardMgr {
 		return total;
 	}
 	
+	public int getTotalCount_region() {
+		int total=0;
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		try {
+			conn=pool.getConnection();
+			pstmt=conn.prepareStatement("select count(*) from boardtbl where theater not in('메가박스')");
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				total=rs.getInt(1);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			pool.freeConnection(conn, pstmt, rs);
+		}
+		return total;
+	}
+	
 	public ArrayList<BoardBean> getBoardList(String keyField2,String keyWord,int start, int end){
 		Connection conn=null;
 		PreparedStatement pstmt=null;
@@ -125,11 +145,11 @@ public class BoardMgr {
 			conn=pool.getConnection();
 			sql="select * from boardtbl where theater='메가박스'";
 			pstmt=conn.prepareStatement(sql);
-			pstmt.executeQuery();
 			rs=pstmt.executeQuery();
 			while(rs.next()) {
 				BoardBean bean=new BoardBean();
 				bean.setNum(rs.getInt("num"));
+				bean.setRegion(rs.getString("region"));
 				bean.setTheater(rs.getString("theater"));
 				bean.setDivi(rs.getString("divi"));
 				bean.setSubject(rs.getString("subject"));
@@ -139,7 +159,7 @@ public class BoardMgr {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
-			
+			pool.freeConnection(conn, pstmt, rs);
 		}
 		return alist;
 	}
@@ -154,11 +174,11 @@ public class BoardMgr {
 			conn=pool.getConnection();
 			sql="select * from boardtbl where theater not in('메가박스')";
 			pstmt=conn.prepareStatement(sql);
-			pstmt.executeQuery();
 			rs=pstmt.executeQuery();
 			while(rs.next()) {
 				BoardBean bean=new BoardBean();
 				bean.setNum(rs.getInt("num"));
+				bean.setRegion(rs.getString("region"));
 				bean.setTheater(rs.getString("theater"));
 				bean.setDivi(rs.getString("divi"));
 				bean.setSubject(rs.getString("subject"));
@@ -168,7 +188,7 @@ public class BoardMgr {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
-			
+			pool.freeConnection(conn, pstmt, rs);
 		}
 		return clist;
 	}

@@ -10,8 +10,8 @@
 <script src="js/board.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <style>
-	#wrap {background:white; height:800px;}
-	#aside {background:white}
+	#wrap {background:white; height:1000px;}
+	#aside {background:white; height:1000px;}
 	#nav {background:white}
 </style>
 </head>
@@ -34,6 +34,8 @@
 	int nowPage1=1;
 	int nowBlock1=1;
 	int pagePerBlock1=10;
+	
+	int totalRecord2=0;
 	
 	int start=0;
 	int end=10;
@@ -67,6 +69,8 @@
 	totalPage1= (int)Math.ceil((double)totalRecord1/ numPerPage1);
 	totalBlock1=(int)Math.ceil((double)totalPage1/pagePerBlock1);
 	nowBlock1=(int)Math.ceil((double)nowPage1/pagePerBlock1);
+	
+	totalRecord2=bMgr.getTotalCount_region();
 	
 	
 	ArrayList<BoardBean> blist = bMgr.getBoardList(keyField, keyWord, start, end);
@@ -146,7 +150,7 @@ function regioncate(e)
 					<li data-tab="tab-2">
 						<button>메가박스공지</button>
 					</li>
-					<li data-tab="tab-1">
+					<li data-tab="tab-3">
 						<button>지점공지</button>
 					</li>
 				</ul>
@@ -365,11 +369,29 @@ function regioncate(e)
 					<p class="result">
 						<strong>
 							전체
-							<em class="blue"><%=bMgr.getTotalCount(keyField, keyWord) %></em>
+							<em class="blue"><%=totalRecord2 %></em>
 							건
 						</strong>
 					</p>
 					<form name=searchFrm method=get action=notice.jsp>
+					<div class="dropdown">
+						<select id="region" onchange="regioncate(this)" name="keyField1" size=1>
+							<option>지역선택</option>
+							<option value="s">서울</option>
+					        <option value="k">경기</option>
+							<option value="i">인천</option>
+							<option value="dcs">대전/충청/세종</option>
+							<option value="bdk">부산/대구/경상</option>
+							<option value="gj">광주/전라</option>
+							<option value="kw">강원</option>
+							<option value="jj">제주</option>
+						</select>
+					</div>
+					<div class="dropdown2">
+						<select id="theater" name="keyField2" disabled>
+							<option>극장선택</option>
+						</select>
+					</div>
 					<div class="search">
 						<input type="text" class="search_text" name="keyWord">
 						<button onclick="javascript:check()">
@@ -399,7 +421,7 @@ function regioncate(e)
 						</thead>
 						<tbody>
 							<%
-							listSize=clist.size();	//가져온 게시물의 개수를 listSize에 저장
+							listSize=clist.size();
 							if(clist.isEmpty())
 							{
 								out.println("등록된 게시물이 없습니다.");
