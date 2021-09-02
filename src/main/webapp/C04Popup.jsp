@@ -6,9 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-* {
-    box-sizing: border-box;
-}
+
 div {
     display: block;
 }
@@ -136,6 +134,14 @@ a:link{
     line-height: 0;
 }
 </style>
+<script>
+var base = $('.main-container').parents('.modal_popup');
+
+$('#close_btn', base).on('click', function() {
+    // 창 닫을때 부모창으로 값 넘기기
+    $.modal.getCurrent().close({ x: '333333' });
+});
+</script>
 </head>
 <body>
 <div class="main-container">
@@ -148,8 +154,8 @@ a:link{
 		</header>
 	</div>
 	<form method=post action="C05LoginProc.jsp">
-	<div class="layer-content">
-		<div class="login-input-area">
+	<div class="modal fade" id="sampleModalPopup" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-dialog-width1000 modal-dialog-height800">
 			<input type="text" name="userid" placeholder="아이디" title="아이디를 입력하세요" class="input-text id">
 			<input type="password" name="userpwd" placeholder="비밀번호" title="비밀번호를 입력하세요" class="input-text pwd">
 			

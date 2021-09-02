@@ -1,195 +1,247 @@
 @charset "UTF-8";
 /*고객센터홈  */
+h1,h2,h3,h4,h5,h6 {margin:0; padding:0;}
 @media only screen and (max-device-width:1300px) {
-	#search
+	.container
 	{
-	    width:870px;
-	    height: 90px;
-	    background-color:lightgray;
-	    border:1px solid;
+	    width: 100%;
+	    min-width: 1100px;
+	    min-height: 100%;
+	    margin: -92px 0 -200px 0;
+	    padding: 92px 0 300px 0;
+	}
+	.page-util {
+	    display: block;
+	    position: static;
+	    width: 100%;
+	    height: 42px;
+	    background-color: #f8f8fa;
+	}
+	.inner-wrap {
+	    width: 1100px;
+	    height: 1100px;
+	    margin: 0 auto;
+	}
+	.lnb-area {
 	    float: left;
-	    position:absolute;
-	    top:188px; left:320px;
-	    line-height: 90px;
+	    width: 200px;
+	    height: 620px;
+	    padding: 40px 0 0 0;
+	}
+	.container #contents {
+	    float: right;
+	    width: calc(100% - 260px);
+	}
+	#contents {
+	    width: 100%;
+	    margin: 0;
+	    padding: 40px 0 0 0;
+	}
+	h2.tit {
+	    padding: 0 0 26px 0;
+	    font-size: 1.8666em;
+	    font-weight: 400;
+	    letter-spacing: -1px;
+	    line-height: 1.1;
+	    color: #222;
+	}
+	.mb30 {
+	    margin-bottom: 30px!important;
+	}
+	
+	.input-search{
+	    margin: 0;
+	    padding: 30px;
+	    background-color: #f2f4f5;
 	    border-radius: 10px;
 	}
-	#search>input[type="text"]
-	{
-	    width:500px;
-	    height:30px;
+	.input-search .label {
+	    display: block;
+	    float: left;
+	    padding: 0 20px 0 0;
+	    line-height: 36px;
+	    font-weight: 600;
 	}
-	.fa-search{position:relative; right:30px;}
-	
-	#content1
-	{
-	    width:1000px;
-	    height: 400px;
-	    position:absolute;
-	    top:300px; left:320px;
+	.w460px {
+	    width: 460px!important;
 	}
-	#content1>a>#cont1
+	.board_search {
+	    position: relative;
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 230px;
+	    height: 36px;
+	    margin: 0;
+	    padding: 0 31px 0 0;
+	    border: 1px solid #d8d9db;
+	    border-radius: 3px;
+	}
+	.input_text {
+	    display: inline-block;
+	    width: 100%;
+	    height: 32px;
+	    padding: 0 10px;
+	    line-height: 30px;
+	    color: #444;
+	    border: 1px solid #d8d9db;
+	    vertical-align: middle;
+	    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+	}
+	.board_search .input_text {
+	    display: block;
+	    width: 100%;
+	    height: 34px;
+	    border: 0;
+	}
+	.customer_main
 	{
-	    width:300px;
-	    height:200px;
+	    width:840px;
+	    height: 900px;
+	}
+	.customer_main .main_block {
+	    width:840px;
+	    height: 364px;
+	    position: relative;
+	    border-bottom: 1px solid #eaeaea;
+	}
+	.customer_main .main_block .block_content {
+	    float: left;
+	    width: 280px;
+	    height: 170px;
+	    margin-bottom: 10px;
+	}
+	.customer_main .main_block .block_content:nth-child(1) {
+	    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-faq.png) 20px top no-repeat;
+	}
+	.customer_main .main_block .block_content:nth-child(2) {
+	    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-miss-question.png) 20px top no-repeat;
+	}
+	.customer_main .main_block .block_content:nth-child(3) {
+	    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-oneandone.png) 20px top no-repeat;
+	}
+	.customer_main .main_block .block_content:nth-child(4) {
+	    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-groupping.png) 20px top no-repeat;
+	}
+	.customer_main .main_block .block_content:nth-child(5) {
+	    background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-butique.png) 20px top no-repeat;
+	}
+	.customer_main .main_block .block_content a p {
+	    margin: 0;
+	    padding: 60px 0 0 0;
+	}
+	.customer_main .main_block .block_content a p strong {
+	    display: block;
+	    margin-bottom: 10px;
+	    font-size: 1.3333em;
+	    font-weight: 400;
+	}
+	.customer_main .notice_block
+	{
+	    width: 840px;
+	    height: 220px;
+	    margin-top: 30px;
+	}
+	.customer_main .notice_block .block
+	{
+	    width: 400px;
+	    height: 220px;
+	    padding: 0 0 10px 0;
+	     border-bottom: 1px solid #eaeaea;
+	}
+	.customer_main .notice_block .block.left
+	{
+	    float: left;
+	}
+	.notice_block .tit_area
+	{
+	    width: 400px;
+	    height: 43px;
+	    overflow: hidden;
+	    margin-bottom: 15px;
+	    border-bottom: 1px solid #555;
+	}
+	.notice_wrap .tit_area .tit {
+	    float: left;
+	    line-height: 32px;
+	}
+	h3.tit {
+	    margin: 0;
+	    padding: 0 0 16px 0;
+	    font-size: 1.6em;
+	    font-weight: 400;
+	    color: #503396;
+	    line-height: 1.1;
+	}
+	h3.tit.small {
+	    width: 163px;
+	    height: 42px;
+	    padding: 0 0 10px 0;
+	    font-size: 1.2em;
+	    color: #222;
 	    float:left;
 	}
-	#content1>a>#cont1>img
+	.notice_block .tit_area .more
 	{
-	    width:50px;
-	    height:50px;
-	}
-	#content1>a>#cont2
-	{
-	    width:300px;
-	    height:200px;
-	    float:left;
-	}
-	#content1>a>#cont2>img
-	{
-	    width:50px;
-	    height:50px;
-	}
-	#content1>a>#cont3
-	{
-	    width:300px;
-	    height:200px;
-	    float:left;
-	}
-	#content1>a>#cont3>img
-	{
-	    width:50px;
-	    height:50px;
-	}
-	#content1>a>#cont4
-	{
-	    width:300px;
-	    height:150px;
-	    float:left;
-	}
-	#content1>a>#cont4>img
-	{
-	    width:50px;
-	    height:50px;
-	}
-	#content1>a>#cont5
-	{
-	    width:300px;
-	    height:200px;
-	    float:left;
-	}
-	#content1>a>#cont5>img
-	{
-	    width:50px;
-	    height:50px;
-	}
-	#content2
-	{
-	    width:1000px;
-	    height: 280px;
-	    position:absolute;
-	    top:678px; left:320px;
-	}
-	#content2>#cont1
-	{
-	    width:400px;
-	    height:195px;
-	    float:left;
-	    margin-top:15px;
-	    border-bottom:1px soild gray;
-	}
-	#content2>#cont1>#cont1_top
-	{
-	    width:400px;
-	    height: 45px;
-	    border-bottom: 1px solid black;
-	    
-	    line-height: 45px;
-	}
-	#content2>#cont1>#cont1_top>h4>#more
-	{
-	    width:80px;
 	    float: right;
-	    margin:0px auto;
-	    font-size:15px;
+	    line-height: 32px;
 	}
-	#content2>#cont1>table
-	{
-		margin-top:10px;
+	.notice_block .block .list li {
+	    overflow: hidden;
+	    position: relative;
+	    color: #329eb1;
+	    font-family: Roboto;
+	    margin: 0;
+	    padding-right: 80px;
+	    line-height: 30px;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
 	}
 	
-	#content2>#cont2
-	{
-	    width:400px;
-	    height:195px;
-	    float:left;
-	    margin:15px 30px 0px 30px;
-	    border-bottom:1px soild lightgray;
+	.list>li {
+	    list-style-type: decimal;
+	    list-style-position: outside;
+	    margin: 0 0 0 24px;
+	    padding: 0;
 	}
-	#content2>#cont2>#cont1_top
+	
+	.customer_main .notice_block .block.right
 	{
-		 height: 45px;
-	    border-bottom: 1px solid black;
-	    line-height: 45px;
-	    border-bottom: 1px solid black;
-	}
-	#content2>#cont2>#cont1_top>h4>#more
-	{
-	    width:80px;
 	    float: right;
-	    margin:0px auto;
-	    font-size:15px;
 	}
-	#content2>#cont2>table
-	{
-		margin-top:10px;
+	
+	.mt70 {
+	    margin-top: 70px!important;
 	}
-	#event
+	.event
 	{
-	    width:1200px;
-	    height:330px;
-	    position:absolute;
-	    top:958px; left:320px;
+	    width: 840px;
+	    height: 170px;
+	    overflow: hidden;
 	}
-	#event>#event1
-	{
-	    width:400px;
-	    height:170px;
-	    background-color:teal;
-	    float:left;
+	.event .left_banner {
+	    float: left;
+	    width: 410px;
+	    height: 170px;
 	}
-	#event>#event1>a>img
-	{
-		width:400px;
-	    height:170px;
+	.event a {
+	    display: block;
+	    width: 100%;
+	    height: 100%;
 	}
-	#event>#event2
+	.event a img
 	{
-	    width:400px;
-	    height:170px;
-	    background-color:violet;
-	    float:left;
-	    margin:0px 30px;
+	    width: 100%;
+	    height: 100%;
 	}
-	#event>#event2>a>img
-	{
-		width:400px;
-	    height:170px;
+	.event .right_banner {
+	    float: right;
+	    width: 410px;
+	    height: 170px;
 	}
 	#footer
 	{
 	    position:absolute; 
-	    top:1278px; left:0px;
+	    top:1400px; left:0px;
 	    font-size:13px;
-	}
-	#footer>table
-	{
-	    width:1100px;
-	}
-	#aside{
-	    height:1150px;
-	}
-	#aside>ul>li>ul>li
-	{
-	    height: 20px; width:200px;
 	}
 }

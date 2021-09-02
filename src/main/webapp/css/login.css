@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@media only screen and (max-device-width:1300px){
+	#my_modal 
+ {
+   display: none;
+   width: 850px;
+   height:400px;
+                padding: 0px 0px;
+                background-color: #fefefe;
+                border: 1px solid #888;
+                border-radius: 3px;
+            }
+.modal-layer
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 850px;
+    height: 484px;
+    z-index: 501;
+    background-color: rgba(0,0,0,0);
+}
+.modal-layer .wrap
+{
+    left: 100%;
+    top: 100%;
+    width: 850px;
+    height: 484px;
+    min-height: 250px;
+    margin: 0;
+    padding: 45px 0 0 0;
+    box-shadow: 2px 2px 6px 2px rgb(0 0 0 / 10%);
+    background: #fff;
+}
+.modal-layer .wrap .header
+{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #503396;
+}
+.modal-layer .wrap .header h3.tit
+{
+    color: #fff;
+    padding: 15px 20px 0 20px!important;
+    font-size: 1.2em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.layer-con
+{
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px 20px 0 20px;
+}
+.loginmember
+{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: gold;
+}
+.loginmember .inner-wrap .col {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.loginmember .inner-wrap .col.left
+{
+    width:380px;
+    float: left;
+}
+.login-input .input-text
+{
+    width:380px;
+    height:46px;
+}
+.pwd
+{
+    margin-top: 15px;
+}
+.login-input .chk-util
+{
+    height: 72px;
+    overflow: hidden;
+    padding: 15px 0 35px 0;
+}
+.login-input .chk-util .left
+{
+    width: 120px;
+    height:25px;
+    float: left;
+}
+[type='checkbox']
+{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+}
+label {
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.login-input .chk-util .right
+{
+    width:180px;
+    height:25px;
+    float: right;
+}
+.login-input .chk-util .ad a {
+    display: block;
+    text-decoration: none;
+}
+.login-input .chk-util .ad a span
+{
+    width:130px;
+    height: 22px;
+    display: inline-block;
+    color: #3d7db7;
+}
+.login-input .chk-util .ad a em {
+    overflow: hidden;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    margin-left: 4px;
+    line-height: 14px;
+    font-size: .8em;
+    border: 1px solid #3d7db7;
+    text-align: center;
+    vertical-align: middle;
+    color: #3d7db7;
+}
+#btnLogin {
+    width:380px;
+    height:38px;
+	line-height: 36px;
+	display: block;
+    width: 380px;
+    padding : 0 10px;
+	background-color: #e0e0e0!important;
+    border-color: #e0e0e0!important;
+    border-radius: 4px;
+}
+.link
+{
+    width: 380px;
+    height: 66px;
+    padding: 20px 0 30px 0;
+    text-align: center;
+}
+.link a:first-child
+{
+    margin-left: 0;
+    padding-left: 0;
+}
+.link a:first-child::before
+{
+	background-color:none;
+}
+.link a
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 0 0 0 27px;
+    padding: 0;
+    font-size: .9333em;
+    color: #666;
+    text-decoration: none;
+}
+.link a::before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    width: 1px;
+    height: 16px;
+    margin-top: -8px;
+    background-color: #d8d9db;
+    pointer-events: none;
+}
+.snslogin
+{
+    text-align: center;
+}
+.snslogin a
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 23px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.loginmember .inner-wrap .col.right
+{
+    width:380px;
+    height:400px;
+    float: right;
+    background-color: wheat;
+}
+
+.modal-layer .wrap .btn-modal-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 16px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-indent: -9999px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-layer-close.png) no-repeat center;
+}
+}
